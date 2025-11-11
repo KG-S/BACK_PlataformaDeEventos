@@ -4,6 +4,32 @@ const db = require("../db");
 
 /**
  * @swagger
+ * /:
+ *   get:
+ *     summary: Retorna as categorias disponíveis na API.
+ *     description: Fornece uma lista das categorias principais gerenciadas pela API.
+ *     responses:
+ *       200:
+ *         description: Lista de categorias retornada com sucesso
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: array
+ *               items:
+ *                 type: string
+ *                 enum:
+ *                   - Organizadores
+ *                   - Eventos
+ *                   - Participantes
+ *                   - Registros
+ */
+
+router.get("/", (req, res) => {
+  res.json(["Organizadores", "Eventos", "Participantes", "Registros"]);
+});
+
+/**
+ * @swagger
  * tags:
  *   - name: Organizadores
  *   - name: Eventos
