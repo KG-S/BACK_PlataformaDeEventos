@@ -5,7 +5,7 @@ const options = {
   definition: {
     openapi: "3.0.0",
     info: {
-      title: "Template Express Docker",
+      title: "API Plataforma de Eventos",
       version: "1.0.0",
       description: "Documentação da API de exemplo",
     },
